@@ -1,0 +1,83 @@
+.userProfileContainer{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom, #10182f, #181f37, #202740, #292f48, #313751, #424761, #525872, #646a83, #8389a1, #a4aabf, #c6ccdf, #e9efff);
+}
+.userProfileContainer .userProfileCard{
+    width: 370px;
+    height: auto;
+    border: 5px solid #3B5998;
+    border-radius: 10px;
+    padding: 20px;
+    justify-content: center;
+    background-color: #e9efff;
+}
+.userProfileContainer .userProfileCard .Fcont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.userProfileContainer .userProfileCard .imgCont{
+    flex-direction: row;
+    height: 80px;
+    width: 80px;
+    border-radius: 100%;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, .5);
+}
+.userProfileContainer .userProfileCard .imgCont img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.userProfileContainer .userProfileCard div label{
+    background-color: #a4aabf;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .5s all ease;
+    margin: auto;
+    font-weight: 500;
+}
+.userProfileContainer .userProfileCard div label:hover{
+    background-color:#00aab7;
+    color: #e9efff;
+}
+
+.userProfileContainer .userProfileCard .Scont{
+    padding: 5px;
+    width: 100%;
+
+}
+.userProfileContainer .userProfileCard .Scont form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+.userProfileContainer .userProfileCard .Scont form div{
+    display: flex;
+    width: 100%;
+    gap: 10px;
+
+}
+.userProfileContainer .userProfileCard .Scont form div input{
+    width: 100%;
+}
+
+.userProfileContainer .userProfileCard .Scont form div button.deleteAccButton{
+    margin: auto;
+    background-color: transparent;
+    color: #10182f;
+    transition: 0.5s all ease;
+}
+
+.userProfileContainer .userProfileCard .Scont form div button.deleteAccButton:hover{
+    color: #ff0000;
+    text-decoration: underline;
+}

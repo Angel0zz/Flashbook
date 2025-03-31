@@ -1,0 +1,129 @@
+.Msg-main-container {
+    width: 100vw;
+    background-image: linear-gradient(to right top, #ffffff, #f6f7fd, #e9f0fc, #daeafa, #c8e4f6);
+    display: flex;
+    height: 90vh;
+}
+.Msg-main-container .cht-bx-container {
+    display: flex;
+    margin: auto;
+    flex-direction: row;
+    width: 100%;
+    background-color: #e0e0e7;
+    height:100%;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); /* Adjusted shadow for more depth */
+    overflow: hidden;
+    background-image: linear-gradient(to right top, #ffffff, #f6f7fd, #e9f0fc, #daeafa, #c8e4f6);
+
+}
+
+
+.Msg-main-container .cht-bx-container .F-Container{
+    flex: 0.5;
+    border-right:1px solid darkgray;
+    padding-block: 1em;
+    background-color: #10182f;
+    color:#fff;
+}
+.Msg-main-container .cht-bx-container .F-Container .Ttle{
+    border-bottom: 2px solid rgba(200, 200, 200, 0.5); 
+}
+.Msg-main-container .cht-bx-container .F-Container .card{
+    height: 50px;
+    color:lightgray;
+    padding:5px;
+    display: flex;
+    align-items: center;
+    line-height:90%;
+    cursor:pointer;
+    gap:10px;
+}
+.Msg-main-container .cht-bx-container .F-Container .card:hover{
+
+    background-color:#7085a3;
+}
+
+.Msg-main-container .cht-bx-container .F-Container .card .cardTitle{
+    font-size:9px;
+}
+.cht-bx-container .F-Container .card section.profile {
+    width: 30px;
+}
+ .cht-bx-container .F-Container .card section.profile img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    border-radius: 100%;
+}
+
+.Msg-main-container .cht-bx-container .F-Container .adminCont{
+    height: 200px;
+    background-color: #b8f2e6;
+    overflow:auto;
+}
+
+
+.Msg-main-container .cht-bx-container .S-Container {
+    flex: 3; 
+    display: flex;
+    flex-direction: column;
+    height: 100%; 
+
+    overflow:hidden;
+
+
+}
+.Msg-main-container .cht-bx-container .S-Container .chatField {
+    display: flex;                  /* Use flexbox */
+    align-items: center;            /* Center items vertically */
+    justify-content: flex-end;      /* Align items to the right */
+    height: 60px;
+    width: 100%;
+    padding-right: 5em;
+    border-top: 2px solid rgba(200, 200, 200, 0.5); /* Light gray top border */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);       /* Shadow effect */
+}
+
+.Msg-main-container .cht-bx-container .S-Container .chatField input {
+    width: 80%;              /* Set height to 60px */
+    padding: 0;
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.8); /* Make it slightly transparent */
+    border: 1px solid #ccc;     
+    border-radius: 5px;     
+    
+}
+
+.Msg-main-container .cht-bx-container .S-Container .chatField input ,  .S-Container .chatField button{
+    margin-right:1.5em
+}
+
+.Msg-main-container .cht-bx-container .S-Container .chat-box {
+    height: 89%; 
+    overflow-y: scroll;
+    flex: 3; 
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-top:1em;
+}
+.cht-bx-container .S-Container .chat-box .msg  section{
+    height: auto;
+    padding: 10px; 
+    border-radius: 5px; 
+    margin-bottom:1em;
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
+    white-space: normal; 
+}
+.headTitle {
+    flex: 0.5;
+    color:#fff;
+    background-color: #10182f;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow at the bottom */
+}
+
+@media (max-width:820) {
+    .Msg-main-container .cht-bx-container{
+        flex-direction:column;
+    }
+}

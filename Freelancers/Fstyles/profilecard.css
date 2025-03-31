@@ -1,0 +1,159 @@
+.freelancer-card-cont{
+    position: fixed;
+    top: 3%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0,0, 0.8);
+    width: 100%;
+    height: 100vh;
+  }
+  .freelancer-card-cont.active{
+    display: flex;
+  }
+  .freelancer-card {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     background-color: #fff;
+     border-radius: 10px;
+     padding: 40px;
+     width: 650px;
+     position: relative;
+     overflow: hidden;
+     box-shadow: 0 2px 20px -5px rgba(0,0,0,0.5);
+ }
+ .freelancer-card-cont .close-card{
+    padding-inline: .3em;
+    position: absolute;
+    top: 2%;
+    left: 95%;
+    background-color: #fff;
+    border-radius: 100%;
+    font-weight: 400;
+    font-size: 20px;
+ }.freelancer-card-cont .close-card:hover{
+    cursor: pointer;
+ }
+
+ .freelancer-card:before {
+    content: '';
+    position: absolute;
+    height: 300%;
+    width: 173px;
+    background: #262626;
+    top: -60px;
+    left: -125px;
+    z-index: 0;
+    transform: rotate(17deg);
+  }
+  
+  .freelancer-card-img {
+    display: block;
+    justify-content: center;
+    align-items: center;   
+    z-index: 3;
+  }
+  .freelancer-card-img .hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .freelancer-card-img .hero img {
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .freelancer-card-info {
+    text-align: center;
+  }
+  .freelancer-card-info form {
+    margin-top: 2em;
+  }
+  .freelancer-card-info form input {
+    width: 120px;
+    height: 20px;
+    font-size: 18px;
+    margin: 0;
+    margin-bottom: 10px;
+    border:none;
+    border-bottom: 1px solid #676869;
+  }
+  .freelancer-card-info form select{
+    width: 100px;
+    font-size: 15px;
+    height: 25px;
+    border:none;
+    border-bottom: 1px solid #676869;
+  }
+
+  .freelancer-card-info p {
+    font-size: 14px;
+    margin-bottom: 2px;
+  }
+  .freelancer-card-info span {
+     font-weight: 700;
+     margin-right: 10px;
+ }
+  @media only screen and (min-width: 768px) {
+    .freelancer-card {
+      flex-direction: row;
+      align-items: flex-start;
+    }   
+    .freelancer-card-img {
+      margin-right: 20px;
+      margin-bottom: 0;
+    }
+  
+    .freelancer-card-info {
+      text-align: left;
+    }
+  }
+ 
+  @media (max-width: 767px){
+    .freelancer-card{
+      width: 80%;
+      height: 70%;
+    }
+    .freelancer-card-cont{
+        padding-top: 10%;
+        top:2%;
+ 
+    }
+    .freelancer-card-cont .close-card{
+        top: 2%;
+        left: 95%;
+
+    }
+    .freelancer-card:before {
+       width: 300%;
+       height: 200px;
+       transform: rotate(0);
+    }
+    .freelancer-card-info form input{
+        width: 30%;
+    }
+    .freelancer-card-info span {
+       display: block;
+       margin-bottom: 0;
+       font-size: 18px;
+    }
+    .freelancer-card-info{
+      font-size: 90%;
+    }
+    .freelancer-card-info form{
+      font-size: 70%;
+    }
+    .freelancer-card-info form input{
+      height: 18px;
+    }
+    
+    .freelancer-card-img .hero img{
+      width: 150px;
+      height: 150px;
+    }
+  }
+  

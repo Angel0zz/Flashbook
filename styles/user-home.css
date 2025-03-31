@@ -1,0 +1,40 @@
+.home{
+    height:100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightcyan;
+    background-image:url("../assets/pic2.jpg") ;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 1s ease;
+}
+
+
+.home .text1{
+    padding-top: 3rem;
+    position: relative;
+    height: 100%;
+    width: 25%;
+    margin-right: 400px;
+}
+.home .text1 h3,h1,p {
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.quote{
+    display: flex;
+    justify-content: center; 
+    margin-top:0;
+    text-align: center;
+}
+
+.home .package{
+    color: #ffffff;
+    text-shadow: 2px 2px 2px #000000;
+    text-align: center;
+
+}

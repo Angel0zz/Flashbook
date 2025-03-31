@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+    --main-color:#19191b;
+    --secondary-color:#57575c;
+    --lighter-color:#e0e0e7;
+    --light-color:#b0b0c0;
+    --dark-color:#52505e;
+
+    --font-smaller:14px;
+    --font-bigger:20px
+}
+
+
+ul{
+    list-style: none;
+}
+h1,h2,h3{
+    font-weight: 700;
+    line-height: 1.25;
+    margin: 0 0 0.5em;
+}
+
+.cont-size{
+    margin-bottom: 2vh;
+    margin-top: 2vh;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.bk-frm-container{
+    background-color: #e9efff;
+    display: none;
+    font-size: 16px;
+    font-weight: 400;
+    line-height:1.8;
+    color: var(--dark-color);
+    max-width:100%;
+    padding:1em;
+    padding-inline: 10%;
+  
+    
+}
+.bk-frm-container.active{
+display: block;
+}
+.bk-frm-container .bk-n-ad{
+    padding-inline: 2em;
+
+    color: #000000;
+}
+
+.bk-frm-container .bk-n-ad h3{
+    color: #7e7e7e;
+}
+.form-box{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    border: 8px solid #615175;
+    border-radius: 15px;
+    background-color: #faf9ff;
+    
+}
+
+
+/* progress*/
+
+.form-box .progress{
+    position: relative;
+
+}
+/* progress steps*/
+
+.progress ul.progress-steps{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 4em;
+    margin-top: 2em;
+    
+}
+.progress ul.progress-steps li{
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+}
+
+.progress ul.progress-steps li > span{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    font-size: var(--font-smaller);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1em;
+    border-radius: 50%;
+    background-color: var(--light-color);
+    z-index: 1;
+
+}
+.progress ul.progress-steps li.active > span{
+    color: white;
+    background-color: var(--main-color);
+    border: 4px solid var(--secondary-color);
+    z-index: 1;
+}
+
+.progress ul li p{
+    position: absolute;
+    top: -2em;
+    font-size: 12px;
+    
+}
+
+ul.progress-steps li p span{
+    font-size: var(--font-smaller);
+    color: var(--light-color);
+    display: none;
+}
+.progress .logo{
+    display: none;
+}
+
+/*form */
+.form-box form{
+    width: 100%;
+    padding: 1.5em 0.01em;
+    background-color: white;
+    border-radius: 30px 30px 15px 15px;
+    margin-bottom: 3em;
+}
+form >div {
+    max-width: 400px;
+    margin: 0 auto;
+}
+form section.selectFreelancersCont{
+    border: 1px solid #bbb; padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+form section.selectFreelancersCont div{
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+}
+form section.selectFreelancersCont div:not(.checkbox){
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+}
+form >div p{
+    color: var(--light-color);
+    margin-bottom: 2em;
+}
+form > div > div:not(.checkbox) {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+}
+
+
+.nameContainer input {
+    width:100%; /* Width of each input */
+    margin-right: 10px; /* Optional spacing between inputs */
+}
+form input,select{
+    height: 40px;
+    padding: 0 1em;
+    border-radius: 7px;
+    outline-color: var(--secondary-color);
+    border: 1px solid var(--light-color);
+    background-color: transparent;
+}
+
+form label{
+    font-size: var(--font-smaller);
+    margin-bottom: 0.5em;
+    font-weight: 600;
+}
+
+/* buttons*/
+form>div:not(.btn-group){
+    display: none;
+    -webkit-animation: fadeIn .6s cubic-bezier(0.39,0.575,0.565,1)both ;
+    animation: fadeIn .6s cubic-bezier(0.39,0.575,0.565,1)both ;
+}
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+        -webkit-transform: translateY(10%);
+        transform: translateY(10%);
+    }
+    100%{
+        opacity: 1;
+        -webkit-transform: translateY(10%);
+        transform: translateY(0);
+    }
+}
+form>div.active{
+    display: block;
+}
+
+.btn-group{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    margin-top: 2em;
+}
+.btn-group [class*='btn-']{
+    background-color: var(--main-color);
+    color: white;
+    padding: 1em 2.5em;
+    border: 4px solid var(--secondary-color);
+    border-radius: 30px;
+    cursor: pointer;
+    -webkit-transition: background-color .3s, border-color .3s ease-out;
+    transition: background-color .3s, border-color .3s ease-out;
+}
+.btn-group button{
+    font-size: 13px;
+}
+.btn-group button:disabled{
+    background-color: var(--light-color);
+    border-color: var(--lighter-color);
+    cursor: text;
+}
+.btn-group [class*='btn-']:hover:not(:disabled){
+    background-color: var(--dark-color);
+    border-color: var(--lighter-color);
+}
+
+.btn-group .btn-submit{
+    display: none;
+}
+.form-three.active ~ .btn-group .btn-submit{
+    display: block;
+}
+.form-three.active ~ .btn-group .btn-next{
+    display: none;
+}
+.form-three.active ~ .btn-group {
+    justify-content: space-between;
+}
+
+
+
+@media (min-width:768px) {
+
+    .form-box{
+        flex-direction: row;
+        width: 80%;
+    }
+    .form-box .progress{
+        flex: 1 0 25%;
+        min-width: 300px;
+        padding: 2em;
+    }
+    .progress ul.progress-steps{
+        flex-direction: column;
+    }
+    ul.progress-steps li{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    ul.progress-steps li:last-child{
+        position: relative;
+        left: -5%;
+    }
+    ul.progress-steps li:not(:last-child)::before{
+        content: '';
+        position: absolute;
+        left: 15%;
+        top: 30px;
+        width: 2px;
+        height: 255%;
+        background-color: var(--light-color);
+    }
+    .form-box form{
+        padding-top: 3.5em;
+        border-radius: 0 15px 15px 0;
+
+    }
+
+    .progress ul li p{
+        position: relative;
+        top: auto;
+        font-size: inherit;
+    }
+    ul.progress-steps li p span{
+        display: block;
+    }
+    .progress .logo{
+        display: block;
+    }
+}
+
+@media (max-width:770px){
+    .bk-frm-container{
+        padding-inline: 3%;
+    }
+}
+@media (max-width:440px){
+    .btn-group [class*='btn-']{
+        padding: 1em 1.5em;
+        gap: 0.5em;
+    }
+}
